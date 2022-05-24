@@ -1,0 +1,34 @@
+#hover_effect{
+    height: 300px;
+    width: 300px;
+    background-color: pink;
+    transition: background 4s;
+}
+#hover_effect:hover{
+    background-color: blueviolet;
+}
+#hover_effect2{
+    height: 300px;
+    width: 300px;
+    background-color: blueviolet;
+    margin-top: 10px;
+    transition: background 4s;
+    transition: 4s;
+}
+#hover_effect2:hover{
+    background-color: black;
+    transform: translate(300px,300px);
+
+}
+#hover_effect3{
+    height: 300px;
+    width: 300px;
+    background-color: brown;
+    transition: background 4s;
+    margin-top: 10px;
+    transition: 4s;
+}
+#hover_effect3:hover{
+    background-color: black;
+    transform: translate(300px,300px) rotate(90deg) scale(1,2) skew(50deg);
+}

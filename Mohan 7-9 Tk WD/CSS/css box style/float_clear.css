@@ -1,0 +1,18 @@
+.column{
+    height: auto;
+    width: 250px;
+    border: 2px solid black;
+    text-align: center;
+    box-shadow: 3px 4px 3px grey;
+    padding: 5px;
+    margin: 15px;
+    float: left;
+}
+.column>h1{
+    color: red;
+    background-color: blue;
+    
+}
+.clear_me{
+    clear: left;
+}

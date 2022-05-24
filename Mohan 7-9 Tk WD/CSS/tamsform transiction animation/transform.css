@@ -1,0 +1,36 @@
+#translate_me{
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    transform: translate(300px,100px);
+
+}
+#rotate_me{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border: 2px solid black;
+    box-shadow: 3px 4px 3px blue;
+    transform: rotate(90deg);
+}
+#scale_me{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    margin-top: 30px;
+    transform: scale(0.5,2);
+}
+#skew_me{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    transform: skew(60deg);
+}
+#all_in_one{
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+    border: 2px solid black;
+    box-shadow: 3px 4px 3px chartreuse;
+    transform: translate(200px,200px) scale(2,2) rotate(90deg) skew(60deg);
+}

@@ -1,0 +1,26 @@
+*{
+    background: linear-gradient(to right, orange, blue, black);
+}
+#grad1{
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(to right,orange 50%,white,green);
+}
+#grad2{
+    height: 300px;
+    width: 300px;
+    background: repeating-linear-gradient(to right,orange 10%,white 20%,green 30%);
+    margin-top: 20px;
+}
+#grad3{
+    height: 300px;
+    width: 300px;
+    background: radial-gradient(green,white,orange 40%);
+    margin-top: 20px;
+}
+#grad4{
+    height: 300px;
+    width: 300px;
+    background: repeating-radial-gradient(black , white 20%);
+    margin-top: 20px;
+}

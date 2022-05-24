@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "header";
+    src: url("fonts/header.ttf");
+}
+@font-face {
+    font-family: "paragraph";
+    src: url("fonts/paragraph.otf");
+}
+#header{
+    color: blue;
+    font-family: "header";
+}
+.paragraph{
+    color: brown;
+    font-family: "paragraph";
+}
