@@ -1,0 +1,162 @@
+app compenent
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><span class="text-primary">FL</span><span class="text-warning"><b>ix</b></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Watch Now</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <app-card></app-card>
+</div>
+
+ANGULAR STYLE
+
+"styles": [
+              "node_modules/bootstrap-icons/font/bootstrap-icons.scss",
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "src/styles.scss"
+            ]
+
+CARD compenent
+
+
+<div class="container-fluid">
+    <div class="row">
+        <img src="https://pbs.twimg.com/media/EzILRIpWgAASFeu.jpg" class="img-fluid" alt="...">
+    </div>
+</div>
+<div class="conatiner mt-3">
+    <div class="row">
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-dark" for="btnradio1" (click)="filterByCategory('all')">ALL</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-dark" for="btnradio2" (click)="filterByCategory('comedy')">COMEDY</label>
+          
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-dark" for="btnradio3" (click)="filterByCategory('horror')">HORROR</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+            <label class="btn btn-outline-dark" for="btnradio4" (click)="filterByCategory('action')">ACTION</label>
+          </div>
+    </div>
+</div>
+
+<div class="container gy-4 gx-2 mt-3">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-3" *ngFor="let films of film">
+            <div class="card" style="width: 18rem;" 
+           
+                        [style.border]="cardBorder"                             			    [ngStyle]="cardTextStyle"
+          >
+                <img [src]="films.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{films.name}}</h5>
+                  <hr>
+                  <p class="card-text">{{films.description}}</p>
+                  <p class="card-text">{{films.release}}</p>
+                  <p class="card-text">{{films.rating}}</p>
+                  <p class="card-text">{{films.category}}</p>
+                  <hr>
+                  <a href="#" class="btn btn-warning">Watch Now</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+
+CARD TS 
+
+ film=[
+    {
+      id:1,
+      name:"Bhool Bhulaiyaa 2",
+      description:"Bhool Bhulaiyaa 2 is a 2022 Indian Hindi-language comedy horror film directed by Anees Bazmee",
+      release:"20 May 2022",
+      rating:"4.5",
+      category:"horror",
+      image:"https://m.media-amazon.com/images/M/MV5BNjY1MjRiMjQtNDEzYi00MTg1LTgxMDAtZWRlZjdmZDI5OTYxXkEyXkFqcGdeQXVyOTAzMTc2MjA@._V1_UY200_CR3,0,200,200_AL_.jpg"
+    },
+    {
+      id:2,
+      name:"Roohi",
+      description:"Roohi is a 2021 Indian Hindi-language comedy horror film directed by Hardik Mehta",
+      release:"11 March 2021",
+      rating:"3",
+      category:"horror",
+      image:"https://a10.gaanacdn.com/gn_img/albums/R7vKXr6Wmr/vKX66A1VWm/size_m_1614946999.webp"
+    },
+    {
+      id:3,
+      name:"Hera pheri",
+      description:"Phir Hera Pheri ... Driven by greed, three rich friends seek to double their wealth and ..",
+      release:"31 March 2000",
+      rating:"5",
+      category:"comedy",
+      image:"https://m.media-amazon.com/images/M/MV5BMzYwZTJlZGYtMzE3Zi00NTYxLWE4YTgtNzFlOTg2MDY5ZTcxXkEyXkFqcGdeQXVyODMyODMxNDY@._V1_UY200_UX200_AL_.jpg"
+    },
+    {
+      id:4,
+      name:"Phir Hera Pheri",
+      description:"Phir Hera Pheri ... Baburao, Raju and Shyam are living happily after having risen from rags to riches.",
+      release:"9 June 2006",
+      rating:"4",
+      category:"comedy",
+      image:"https://a10.gaanacdn.com/gn_img/albums/10q3Zj1352/10q3Zj1352/size_m.webp"
+    },
+    {
+      id:5,
+      name:"Uri: The Surgical Strike",
+      description:"Uri: The Surgical Strike is a 2019 Indian Hindi-language action film written and dire...",
+      release:"11 January 2019",
+      rating:"5",
+      category:"action",
+      image:"https://img.wynk.in/unsafe/200x200/filters:no_upscale():format(jpg)/http://s3-ap-south-1.amazonaws.com/wynk-music-cms/music/1548852954/srch_zeemusic_INZ031404831.jpg"
+    },
+    {
+      id:6,
+      name:"Raazi",
+      description:"Raazi is a 2018 Indian Hindi-language spy action thriller film directed by Meghna Gulzar",
+      release:"11 May 2018",
+      rating:"4.8",
+      category:"action",
+      image:"https://img.wynk.in/unsafe/200x200/filters:no_upscale():format(jpg)/http://s3-ap-south-1.amazonaws.com/wynk-music-cms/music/1553256709/srch_zeemusic_INZ031405197.jpg"
+    }
+  ]
+	                  cardBorder ="2px solid black"
+	                  cardTextStyle = { 
+					   "font-family":"Lucida Grande",
+					   "color":"grey"
+						}
+
+            Filmarray=this.film
+            filterByCategory(Rcategory:string)
+            {
+              if(Rcategory==="all")
+              {
+                this.Filmarray=this.film
+              }
+              else
+              {
+                this.Filmarray=this.film.filter(films=>films.category===Rcategory)
+              }
+            }
